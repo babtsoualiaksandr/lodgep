@@ -1,0 +1,43 @@
+<mat-nav-list>
+  <div class="profile-card">
+    <div class="header">
+      <h2>
+        {{ user?.displayName}}
+      </h2>
+      <h6>{{user?.email}}</h6>
+    </div>
+    <mat-icon class="person" *ngIf="!user?.photoURL">personal-outline</mat-icon>
+    <img
+      src="{{ user?.photoURL }}"
+      alt="Name Users"
+      *ngIf="user?.photoURL"
+    />
+  </div>
+  <mat-divider></mat-divider>
+  <h2 matSubheader>Pages</h2>
+
+  <a mat-list-item routerLink="map" routerLinkActive="list-item-active"
+    >Map</a
+  >
+  <a mat-list-item routerLink="firestore" routerLinkActive="list-item-active"
+    >Icons</a
+  >
+
+  <mat-divider></mat-divider>
+
+  <h2 matSubheader>Tools</h2>
+
+  <a mat-list-item routerLink="map" routerLinkActive="list-item-active">
+    <mat-icon>import_contacts</mat-icon>
+    Contacts
+  </a>
+  <a mat-list-item routerLink="photographer" routerLinkActive="list-item-active">
+    <mat-icon>contact_phone</mat-icon>
+
+  </a>
+  <a mat-list-item routerLink="addphotographer" routerLinkActive="list-item-active">
+    <mat-icon>contact_phone</mat-icon>
+
+  </a>
+
+</mat-nav-list>
