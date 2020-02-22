@@ -1,10 +1,20 @@
+<router-outlet></router-outlet>
 <mat-card class="map-container">
   <mat-card-header>
-    <mat-form-field class="mat-headline" >
-      <mat-label>insert count</mat-label>
-      <input type="text" matInput placeholder="count icons"
-      [(ngModel)]="iconsCount" />
+    <mat-form-field class="mat-headline">
+      <mat-label></mat-label>
+      <input
+        type="text"
+        matInput
+        placeholder="Amount icons"
+        [(ngModel)]="iconsCount"
+      />
     </mat-form-field>
+    <button mat-button type="submit" (click)="addMarker()">Mark</button>
+
   </mat-card-header>
-    <mat-card-content id="map"> </mat-card-content>
+  <mat-card-content #map id="map"> </mat-card-content>
 </mat-card>
+<app-drop-svg [icon]="icon" hidden></app-drop-svg>
+<app-pickup [icon]="icon" hidden></app-pickup>
+
